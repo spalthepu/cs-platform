@@ -1,7 +1,4 @@
 # cs-platform
-Customer Smart Platform
-
-# cs-platform
 
 Customer Smart Data Platform
 
@@ -53,4 +50,17 @@ Customer Smart Data Platform
 
 
 
+11. Execute  the CSPlatform with the command:
 
+> mvn exec:java -Dexec.mainClass=ai.customersmart.CSPlatform
+
+
+12. Put some data onto the KAFKA topic 'customer-activity'
+
+Run the console KAFKA producer
+$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic customer-activity
+
+Then type the content:
+> {"account_number":1,"balance":39225,"firstname":"Amber","lastname":"Duke","age":32,"gender":"M","address":"880 Holmes Lane","employer":"Pyrami","email":"amberduke@pyrami.com","city":"Brogan","state":"IL"}
+
+There is a file in data/ directory where sample data is located. We can use accounts.json for this testing
